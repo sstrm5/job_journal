@@ -1,0 +1,9 @@
+{% include 'base.html' %}
+
+{% block body %}
+  <ul>
+    {% for job in jobs %}
+        <li>{{ job }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

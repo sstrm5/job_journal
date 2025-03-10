@@ -2,7 +2,7 @@ from datetime import datetime
 import sqlalchemy as sa
 from sqlalchemy import orm
 
-SqlAlchemyBase = orm.declarative_base()
+from app.data.db_session import SqlAlchemyBase
 
 
 class User(SqlAlchemyBase):
