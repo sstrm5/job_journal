@@ -17,15 +17,4 @@ def get_jobs():
 
 @main_blueprint.route('/add')
 def add_jobs():
-    session = db_session.create_session()
-    job = Jobs(
-        team_leader=1,
-        job='Developer',
-        work_size=3,
-        collaborators='Jane, John',
-        start_date=datetime(2021, 1, 1),
-        end_date=datetime(2021, 6, 30),
-        is_finished=False,
-    )
-    session.add(job)
-    session.commit()
+    ...

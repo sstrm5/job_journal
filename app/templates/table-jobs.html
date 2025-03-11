@@ -1,0 +1,32 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">№</th>
+        <th scope="col">Название работы</th>
+        <th scope="col">Ответственный, id</th>
+        <th scope="col">Продолжительность, ч</th>
+        <th scope="col">Список id команды</th>
+        <th scope="col">Статус</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for job in jobs %}
+        <tr>
+          <th scope="row">{{ loop.index }}</th>
+          <td>{{ job.job }}</td>
+          <td>{{ job.team_leader }}</td>
+          <td>{{ job.work_size }}</td>
+          <td>{{ job.collaborators }}</td>
+          {% if job.is_finished %}
+            <td class="table-success">
+              Завершено
+            </td>
+          {% else %}
+            <td class="table-info">
+              В процессе
+            </td>
+          {% endif %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>

@@ -1,9 +1,11 @@
 {% include 'base.html' %}
 
+{% block title %}
+  <title>Jobs table</title>
+{% endblock title %}
+
 {% block body %}
-  <ul>
-    {% for job in jobs %}
-        <li>{{ job }}</li>
-    {% endfor %}
-  </ul>
+  <div class='wrapper'>
+    {% include 'table-jobs.html' %}
+  </div>
 {% endblock %}
